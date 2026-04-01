@@ -85,7 +85,7 @@ class AMNTDDA(nn.Module):
             self.hgt.append(self.hgt_dgl)
         self.hgt.append(self.hgt_dgl_last)
 
-        encoder_layer = nn.TransformerEncoderLayer(d_model=args.gt_out_dim, nhead=args.tr_head)
+        encoder_layer = nn.TransformerEncoderLayer(d_model=args.gt_out_dim, nhead=args.tr_head, batch_first=True)
         self.drug_trans = nn.TransformerEncoder(encoder_layer, num_layers=args.tr_layer)
         self.disease_trans = nn.TransformerEncoder(encoder_layer, num_layers=args.tr_layer)
 
