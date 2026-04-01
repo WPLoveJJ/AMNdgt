@@ -1,0 +1,5 @@
+# 忽略所有名为 best_model.pth 的文件
+best_model.pth
+
+# 或者如果你想更彻底一点，忽略所有 .pth 结尾的模型权重文件
+*.pth,*.txt
